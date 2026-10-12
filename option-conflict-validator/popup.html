@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多选框「无」冲突校验</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <h1>「无」冲突校验</h1>
+      <p class="desc">
+        校验指定的多选框：当“无”这类选项与其它选项被<strong>同时选中</strong>时，
+        在页面上把对应的框标红并显示报错，用于标注质检。
+      </p>
+
+      <label class="switch-row">
+        <span>启用校验</span>
+        <input id="enabled" type="checkbox" />
+      </label>
+
+      <label class="field">
+        <span>需要校验的字段</span>
+        <textarea id="fields" rows="4" spellcheck="false"></textarea>
+        <small>每行一个字段名，需与页面字段标签文字一致。默认：画内人声 / 唇动方式 / 非语言人声 / 画外声</small>
+      </label>
+
+      <label class="field">
+        <span>视为「无」的选项</span>
+        <textarea id="noneValues" rows="3" spellcheck="false"></textarea>
+        <small>每行一个。命中其中之一且同时存在其它选项即判为冲突。默认：无</small>
+      </label>
+
+      <div class="actions">
+        <button id="reset" type="button" class="ghost">恢复默认</button>
+        <button id="save" type="button" class="primary">保存</button>
+      </div>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>「无」冲突校验 Demo</title>
+    <link rel="stylesheet" href="../content.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        background: #eef1f6;
+        color: #1f2329;
+      }
+      h2 {
+        font-size: 15px;
+      }
+      .tip {
+        font-size: 13px;
+        color: #4e5969;
+        margin-bottom: 16px;
+        line-height: 1.7;
+      }
+      .card {
+        background: rgb(248, 250, 254);
+        border-radius: 6px;
+        border: 1px solid rgb(232, 237, 245);
+        padding: 12px;
+        max-width: 560px;
+        margin-bottom: 16px;
+      }
+      .rubric-select-item {
+        margin-bottom: 14px;
+      }
+      .rubric-select-label {
+        font-size: 13px;
+        margin-bottom: 6px;
+      }
+      .required-mark {
+        color: #e34d59;
+        margin-right: 2px;
+      }
+      /* 仿 TDesign 多选框外观 */
+      .t-input,
+      .t-select-input,
+      .t-cascader {
+        display: flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 0 8px;
+        background: #f3f3f3;
+        border: 1px solid #dcdcdc;
+        border-radius: 3px;
+      }
+      .t-tag {
+        display: inline-flex;
+        align-items: center;
+        height: 22px;
+        padding: 0 8px;
+        margin: 4px 4px 4px 0;
+        background: #e7e7e7;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>多选框「无」冲突校验 —— 测试页</h2>
+    <p class="tip">
+      安装「多选框「无」冲突校验」插件后打开本页，下面带冲突的框会被标红并显示报错；
+      正常的框保持原样。本页静态模拟了 TDesign 多选框的 DOM 结构。
+    </p>
+
+    <div class="card">
+      <div class="rubric-select-item">
+        <div class="rubric-select-label"><span class="required-mark">*</span>画内人声</div>
+        <div class="t-select-input t-select-input--multiple t-select">
+          <div class="t-input">
+            <div class="t-input__prefix">
+              <div class="t-tag"><span>无</span></div>
+              <div class="t-tag"><span>说话</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rubric-select-item">
+        <div class="rubric-select-label"><span class="required-mark">*</span>唇动方式</div>
+        <div class="t-select-input t-select-input--multiple t-select">
+          <div class="t-input">
+            <div class="t-input__prefix">
+              <div class="t-tag"><span>说话</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rubric-select-item">
+        <div class="rubric-select-label"><span class="required-mark">*</span>非语言人声</div>
+        <div class="t-select-input t-select-input--multiple t-cascader">
+          <div class="t-input">
+            <div class="t-input__prefix">
+              <div class="t-tag"><span>无</span></div>
+              <div class="t-tag"><span>拟声口技/弹舌</span></div>
+              <div class="t-tag"><span>笑声</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rubric-select-item">
+        <div class="rubric-select-label"><span class="required-mark">*</span>画外声</div>
+        <div class="t-select-input t-select-input--multiple t-select">
+          <div class="t-input">
+            <div class="t-input__prefix">
+              <div class="t-tag"><span>无</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rubric-select-item">
+        <div class="rubric-select-label"><span class="required-mark">*</span>性别</div>
+        <div class="t-select__wrap">
+          <div class="t-select-input t-select">
+            <div class="t-input">
+              <div class="t-tag"><span>男性</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../content.js"></script>
+  </body>
+</html>

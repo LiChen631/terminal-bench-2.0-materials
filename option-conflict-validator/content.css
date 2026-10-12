@@ -1,0 +1,32 @@
+/* 多选框「无」冲突校验 —— 错误样式 */
+
+.rubric-select-item.ocv-error .t-input,
+.rubric-select-item.ocv-error .t-select-input,
+.rubric-select-item.ocv-error .t-cascader {
+  border-color: #e34d59 !important;
+  box-shadow: 0 0 0 2px rgba(227, 77, 89, 0.2) !important;
+  border-radius: 6px;
+}
+
+.rubric-select-item.ocv-error .t-tag {
+  background-color: #fff0f0 !important;
+  border: 1px solid #e34d59 !important;
+  color: #b21f2d !important;
+}
+
+.rubric-select-item .ocv-error-msg {
+  margin-top: 4px;
+  color: #e34d59;
+  font-size: 12px;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.rubric-select-item .ocv-error-msg::before {
+  content: "⚠";
+  flex: 0 0 auto;
+  font-size: 13px;
+  line-height: 1.4;
+}

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "多选框「无」冲突校验",
+  "version": "0.1.0",
+  "description": "校验「画内人声 / 唇动方式 / 非语言人声 / 画外声」四个多选框：当“无”与其它选项被同时选中时，在页面上标红并报错。",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "多选框「无」冲突校验",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

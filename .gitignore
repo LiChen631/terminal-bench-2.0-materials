@@ -1,0 +1,26 @@
+# macOS 资源分叉与系统元数据
+__MACOSX/
+.DS_Store
+._*
+
+# Terminal-Bench 运行产物（不应提交）
+jobs/
+**/jobs/
+agent/sessions/
+**/agent/sessions/
+
+# 密钥与本机配置
+.env
+.env.*
+*.key
+*_key.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 编辑器
+.vscode/
+.idea/
